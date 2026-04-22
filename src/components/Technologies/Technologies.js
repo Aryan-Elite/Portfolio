@@ -14,33 +14,27 @@ import {
 } from "./TechnologiesStyles";
 
 import {
-  SiFirebase,
   SiGit,
+  SiCplusplus,
+  SiHtml5,
   SiCss3,
   SiMongodb,
   SiExpress,
-  SiTypescript,
   SiPython,
   SiJavascript,
-  SiVite,
-  SiTailwindcss,
   SiFastapi,
   SiPostman,
   SiPostgresql,
-  SiVercel,
-  SiNetlify,
-  SiHostinger,
-  SiRust,
-  SiSolidity,
-  SiEthereum,
+  SiGraphql,
+  SiRedis,
+  SiSupabase,
+  SiAmazonaws,
+  SiMysql,
+  SiOpenai,
+  SiNodedotjs,
 } from "react-icons/si";
-import {
-  TbBrandNextjs,
-  TbBrandGolang,
-  TbBrandReactNative,
-} from "react-icons/tb";
 
-import { FaReact, FaHardHat, FaWallet } from "react-icons/fa";
+import { FaReact, FaDatabase } from "react-icons/fa";
 import { IoLogoDocker } from "react-icons/io5";
 
 const Technologies = () => (
@@ -48,20 +42,11 @@ const Technologies = () => (
     <SectionDivider />
     <SectionTitle>Tech Stacks</SectionTitle>
     <SectionText>
-      <SectionText>
-        I work with web, cloud, and blockchain technologies, building real-world
-        projects and continuously expanding my skills.
-      </SectionText>
+      I build backend systems and AI-powered products using modern web, cloud, and data technologies.
     </SectionText>
 
     <SectionHeading>Programming Languages</SectionHeading>
     <GridContainer>
-      <TechCard>
-        <TechIcon>
-          <SiPython />
-        </TechIcon>
-        <TechName>Python</TechName>
-      </TechCard>
       <TechCard>
         <TechIcon>
           <SiJavascript />
@@ -70,43 +55,49 @@ const Technologies = () => (
       </TechCard>
       <TechCard>
         <TechIcon>
-          <SiTypescript />
+          <SiPython />
         </TechIcon>
-        <TechName>TypeScript</TechName>
+        <TechName>Python</TechName>
       </TechCard>
       <TechCard>
         <TechIcon>
-          <TbBrandGolang />
+          <SiCplusplus />
         </TechIcon>
-        <TechName>GoLang</TechName>
+        <TechName>C++</TechName>
       </TechCard>
-
+      <TechCard>
+        <TechIcon>
+          <SiHtml5 />
+        </TechIcon>
+        <TechName>HTML</TechName>
+      </TechCard>
+      <TechCard>
+        <TechIcon>
+          <SiCss3 />
+        </TechIcon>
+        <TechName>CSS</TechName>
+      </TechCard>
+      <TechCard>
+        <TechIcon>
+          <FaDatabase />
+        </TechIcon>
+        <TechName>SQL</TechName>
+      </TechCard>
     </GridContainer>
-    <SectionHeading>Web Dev & Frameworks</SectionHeading>
+
+    <SectionHeading>Frameworks & Libraries</SectionHeading>
     <GridContainer>
       <TechCard>
         <TechIcon>
-          <TbBrandNextjs />
+          <SiNodedotjs />
         </TechIcon>
-        <TechName>Next.js</TechName>
+        <TechName>Node.js</TechName>
       </TechCard>
       <TechCard>
         <TechIcon>
           <FaReact />
         </TechIcon>
         <TechName>React.js</TechName>
-      </TechCard>
-      <TechCard>
-        <TechIcon>
-          <SiVite />
-        </TechIcon>
-        <TechName>Vite</TechName>
-      </TechCard>
-      <TechCard>
-        <TechIcon>
-          <SiTailwindcss />
-        </TechIcon>
-        <TechName>TailwindCSS</TechName>
       </TechCard>
       <TechCard>
         <TechIcon>
@@ -122,50 +113,13 @@ const Technologies = () => (
       </TechCard>
       <TechCard>
         <TechIcon>
-          <TbBrandReactNative />
+          <SiGraphql />
         </TechIcon>
-        <TechName>React Native</TechName>
+        <TechName>GraphQL</TechName>
       </TechCard>
     </GridContainer>
-    {/* <SectionHeading>Blockchain</SectionHeading>
-    <GridContainer>
-      <TechCard>
-        <TechIcon>
-          <SiSolidity />
-        </TechIcon>
-        <TechName>Solidity</TechName>
-      </TechCard>
 
-      <TechCard>
-        <TechIcon>
-          <SiRust />
-        </TechIcon>
-        <TechName>Rust</TechName>
-      </TechCard>
-
-      <TechCard>
-        <TechIcon>
-          <SiEthereum />
-        </TechIcon>
-        <TechName>Ethereum</TechName>
-      </TechCard>
-
-      <TechCard>
-        <TechIcon>
-          <FaWallet />
-        </TechIcon>
-        <TechName>Metamask</TechName>
-      </TechCard>
-
-      <TechCard>
-        <TechIcon>
-          <FaHardHat />
-        </TechIcon>
-        <TechName>HardHat</TechName>
-      </TechCard>
-    </GridContainer> */}
-
-    <SectionHeading>Databases & Hosting</SectionHeading>
+    <SectionHeading>Databases & Cloud</SectionHeading>
     <GridContainer>
       <TechCard>
         <TechIcon>
@@ -179,31 +133,30 @@ const Technologies = () => (
         </TechIcon>
         <TechName>PostgreSQL</TechName>
       </TechCard>
-
       <TechCard>
         <TechIcon>
-          <SiFirebase />
+          <SiRedis />
         </TechIcon>
-        <TechName>Firebase</TechName>
+        <TechName>Redis</TechName>
       </TechCard>
       <TechCard>
         <TechIcon>
-          <SiVercel />
+          <SiSupabase />
         </TechIcon>
-        <TechName>Vercel</TechName>
+        <TechName>Supabase</TechName>
       </TechCard>
       <TechCard>
         <TechIcon>
-          <SiNetlify />
+          <SiMysql />
         </TechIcon>
-        <TechName>Netlify</TechName>
+        <TechName>MySQL</TechName>
       </TechCard>
-      {/* <TechCard>
+      <TechCard>
         <TechIcon>
-          <SiHostinger />
+          <SiAmazonaws />
         </TechIcon>
-        <TechName>Hostinger</TechName>
-      </TechCard> */}
+        <TechName>AWS</TechName>
+      </TechCard>
     </GridContainer>
 
     <SectionHeading>DevOps & Tools</SectionHeading>
@@ -222,15 +175,15 @@ const Technologies = () => (
       </TechCard>
       <TechCard>
         <TechIcon>
-          <SiCss3 />
-        </TechIcon>
-        <TechName>VS Code</TechName>
-      </TechCard>
-      <TechCard>
-        <TechIcon>
           <SiPostman />
         </TechIcon>
         <TechName>Postman</TechName>
+      </TechCard>
+      <TechCard>
+        <TechIcon>
+          <SiOpenai />
+        </TechIcon>
+        <TechName>OpenAI API</TechName>
       </TechCard>
     </GridContainer>
     <SectionDivider />

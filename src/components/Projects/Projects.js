@@ -13,6 +13,7 @@ import {
   TitleContent,
   UtilityList,
   Img,
+  ImgPlaceholder,
 } from "./ProjectsStyles";
 import {
   Section,
@@ -27,14 +28,18 @@ const Projects = () => (
     <Section id="projects">
       <SectionTitle main>Projects</SectionTitle>
       <SectionText>
-        I've delivered impactful solutions through various client projects.
-        Explore some of my standout personal projects below.
+        When I'm not working, I'm still building. Personal projects are where
+        I experiment, break things, and figure out what actually works.
       </SectionText>
 
       <GridContainer>
         {projects.map((project, index) => (
           <BlogCard key={index}>
-            <Img src={project.image} alt={project.title} />
+            {project.image ? (
+              <Img src={project.image} alt={project.title} />
+            ) : (
+              <ImgPlaceholder>{project.title[0]}</ImgPlaceholder>
+            )}
             <HeaderThree title={project.title}>{project.title}</HeaderThree>
             <Hr />
             <CardInfo>{project.description}</CardInfo>

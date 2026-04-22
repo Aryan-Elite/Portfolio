@@ -4,7 +4,7 @@ import {
   SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import { LeftSection } from "./HeroStyles";
+import { LeftSection, RightSection, ProfileImage } from "./HeroStyles";
 import Button from "../../styles/GlobalComponents/Button";
 
 const Hero = (props) => (
@@ -15,12 +15,12 @@ const Hero = (props) => (
           Hey there!
         </SectionTitle>
         <SectionText>
-          I'm Akash SakthiMurugan, passionate about building impactful digital
-          experiences. With experience mentoring interns at DNYX and developing
-          educational games to promote Tamil learning, I strive to blend
-          technology with creativity. Currently pursuing a B.Tech in Information
-          Technology at SSN, I am expanding my skills into Blockchain
-          Dev to drive future innovations.
+          I'm Aryan Gupta, a backend developer who designs and ships scalable,
+          production-ready systems. I have hands-on experience building AI
+          agents, brand citation pipelines with OpenAI, and A/B testing
+          infrastructure for LLM applications. I love building backend systems
+          that others rely on without knowing it. AI is just another part of
+          that stack, not a shortcut.
         </SectionText>
         <Button
           className="px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-700 sm:px-2 sm:py-1"
@@ -32,6 +32,9 @@ const Hero = (props) => (
           My Resume
         </Button>
       </LeftSection>
+      <RightSection>
+        <ProfileImage src="/images/profile.jpeg" alt="Aryan Gupta" />
+      </RightSection>
     </Section>
   </>
 );

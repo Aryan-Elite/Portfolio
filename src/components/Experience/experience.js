@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import Image from "next/image";
+import { SectionTitle } from "../../styles/GlobalComponents";
 
 // Enhanced Color Palette
 const colors = {
@@ -47,33 +48,6 @@ const Section = styled.section`
 `;
 
 
-const SectionTitle = styled.h2`
-  font-weight: 800;
-  font-size: 56px;
-  line-height: 67px;
-  width: max-content;
-  max-width: 100%;
-  background: linear-gradient(
-    121.57deg,
-    #ffffff 18.77%,
-    rgba(255, 255, 255, 0.66) 60.15%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    font-size: 48px;
-    line-height: 48px;
-    margin-bottom: 12px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 8px;
-  }
-`;
 
 
 const TimelineContainer = styled.div`
@@ -260,36 +234,35 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: "KaReFo",
-      role: "Software Developer Intern",
-      duration: "November 2024 - Present",
-      logo: "/images/karefo.png",
+      company: "EasilyGeo",
+      role: "Software Developer",
+      duration: "Jan 2026 – Apr 2026",
+      logo: null,
       bullets: [
-        "Building 19 interactive Tamil games in React.js, integrated into an HTML site with dynamic API-driven data.",
-        "Developed score tracking logic with backend API sync and custom installer for deployment.",
-        "Designed responsive layouts for all screen sizes and implemented Safari-specific compatibility fixes."
+        "Built a brand citation tracking pipeline using OpenAI Web Search and Responses API, with PostgreSQL for storing prompts, citations, and ranking data across AI search engines.",
+        "Took the product from zero to 20 paying clients by handling backend, infrastructure, and iteration end-to-end.",
+        "Built an AI agent to auto-generate technical blogs; 28 out of 30 indexed by Google within 10 days (93% indexing rate)."
       ]
     },
     {
-      company: "DNYX",
-      role: "Frontend Team Lead",
-      duration: "July 2024 - October 2024",
-      logo: "/images/dnyx.png",
+      company: "LaikaTest",
+      role: "Software Developer",
+      duration: "Oct 2025 – Jan 2026",
+      logo: null,
       bullets: [
-        "Led frontend projects, mentored 12 interns, and managing client deliverables",
-        "Ensured quality control and timely releases by coordinating with backend and UI/UX teams",
-        "Enhanced user experience and web performance for large-scale applications"
+        "Designed and built prompt management infrastructure using Supabase, storing, labelling, and versioning prompt variants to support structured A/B testing across agent runs.",
+        "Implemented distributed tracing using OpenTelemetry to monitor LLM call chains, token usage, and latency across agent runs.",
+        "Published the LaikaTest npm SDK in Node.js with TypeScript support for prompt retrieval, variant management, and client-side score submission."
       ]
     },
     {
-      company: "Digenie",
-      role: "Web Dev Intern",
-      duration: "April 2024 - June 2024",
-      logo: "/images/digenie.png",
+      company: "Envint",
+      role: "Backend Developer Intern",
+      duration: "Dec 2024 – Mar 2025",
+      logo: null,
       bullets: [
-        "Developed web applications using Next.js for scalability and performance",
-        "Contributed to client projects like Sri Hospitals and Digenie",
-        "Created style guides to ensure consistency and maintainability"
+        "Developed backend services using Node.js and DynamoDB, reducing report generation time by 80% for a SaaS platform.",
+        "Achieved 99.9% uptime and 100,000+ annual report downloads via AWS EC2 and CloudWatch."
       ]
     }
   ];
@@ -304,12 +277,18 @@ const Experience = () => {
             isVisible={isVisible}
           >
             <CompanyLogo>
-              <Image
-                src={exp.logo}
-                alt={`${exp.company} logo`}
-                width={100}
-                height={100}
-              />
+              {exp.logo ? (
+                <Image
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
+                  width={100}
+                  height={100}
+                />
+              ) : (
+                <span style={{ fontSize: "3.6rem", fontWeight: 800, color: colors.accent }}>
+                  {exp.company[0]}
+                </span>
+              )}
             </CompanyLogo>
             <CompanyName>{exp.company}</CompanyName>
             <RoleTitle>{exp.role}</RoleTitle>

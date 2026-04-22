@@ -1,6 +1,5 @@
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { SiX } from "react-icons/si";
 import { Link } from "../../styles/GlobalComponents";
 import { SocialIcons } from "../Header/HeaderStyles";
 import {
@@ -22,32 +21,25 @@ const Footer = () => {
     <FooterWrapper>
       <LinkList>
         <LinkColumn>
-          <LinkTitle>Chat</LinkTitle>
-          <LinkItem href="https://wa.me/9491386870">WhatsApp</LinkItem>
-        </LinkColumn>
-        <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:sakthimuruganakash@gmail.com">
-            Akash SakthiMurugan
+          <LinkItem href="mailto:aryangupta.offc@gmail.com">
+            Aryan Gupta
           </LinkItem>
         </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
           <Slogan>
-            Copyright &copy; {year} <Link href="/">Akash</Link>. All rights
+            Copyright &copy; {year} <Link href="/">Aryan</Link>. All rights
             reserved.
           </Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com/akash768145s">
+          <SocialIcons href="https://github.com/aryan-elite">
             <AiFillGithub size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/akash-sakthimurugan-352b26236/">
+          <SocialIcons href="https://www.linkedin.com/in/aryan-gupta-41494323a/">
             <AiFillLinkedin size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://x.com/stackedakash">
-            <SiX size="2.5rem" />
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>

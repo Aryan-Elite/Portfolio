@@ -20,6 +20,19 @@ export const Img = styled.img`
   transition: transform 0.5s ease;
 `;
 
+export const ImgPlaceholder = styled.div`
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #162340 0%, #3a7ca5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.2);
+`;
+
 export const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
