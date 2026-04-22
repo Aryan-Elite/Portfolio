@@ -33,6 +33,7 @@ import {
   SiOpenai,
   SiNodedotjs,
 } from "react-icons/si";
+import { BsRobot } from "react-icons/bs";
 
 import { FaReact, FaDatabase } from "react-icons/fa";
 import { IoLogoDocker } from "react-icons/io5";
@@ -142,6 +143,10 @@ const Technologies = () => (
       <TechCard>
         <TechIcon><SiOpenai color="#ffffff" /></TechIcon>
         <TechName>OpenAI API</TechName>
+      </TechCard>
+      <TechCard>
+        <TechIcon><BsRobot color="#CC785C" /></TechIcon>
+        <TechName>Claude Code</TechName>
       </TechCard>
     </GridContainer>
     <SectionDivider />

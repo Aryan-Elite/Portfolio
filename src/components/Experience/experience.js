@@ -39,12 +39,19 @@ const timelineAnimation = keyframes`
   }
 `;
 
-// Styled Components
 const Section = styled.section`
   padding: 100px 0;
   background: ${colors.background};
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 40px 0;
+  }
 `;
 
 
@@ -66,6 +73,15 @@ const TimelineContainer = styled.div`
     background: ${colors.timelineLine};
     transform: translateX(-50%);
     z-index: 1;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 0 1rem 0 3.5rem;
+
+    &::before {
+      left: 16px;
+      transform: none;
+    }
   }
 `;
 
@@ -119,6 +135,23 @@ const TimelineCard = styled.div`
   &:hover {
     transform: translateY(-10px);
     border-color: ${colors.accent};
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-self: unset !important;
+    padding: 1.8rem;
+
+    &::before {
+      left: -32px !important;
+      right: auto !important;
+      width: 20px;
+      height: 20px;
+      top: 2.5rem;
+      transform: none;
+    }
   }
 `;
 

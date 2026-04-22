@@ -9,21 +9,21 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 32px 48px 0;
+  padding: 60px 48px 80px;
   margin: 0 auto;
-  box-sizing: content-box;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
   background-color: #0f1624;
-  height: 100vh;
+  width: 100%;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
+    padding: 48px 24px 64px;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 16px 16px 0;
-    width: calc(100vw - 32px);
+    padding: 40px 16px 60px;
+    width: 100%;
   }
 `;
 

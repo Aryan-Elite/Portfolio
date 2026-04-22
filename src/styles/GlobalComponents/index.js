@@ -3,23 +3,26 @@ import styled from 'styled-components'
 export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex"};
   flex-direction: ${(props) => props.row ? "row" : "column"};
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0"} ;
+  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0"};
   margin: 0 auto;
-  box-sizing: content-box;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 100vw;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
+    padding: ${(props) => props.nopadding ? "0" : "24px 24px 0"};
     flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0"} ;
-
-    width: calc(100vw - 32px);
+    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0"};
     flex-direction: column;
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 `
 

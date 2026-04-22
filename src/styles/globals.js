@@ -57,7 +57,14 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 
+    @media screen and (max-width: 640px) {
+      font-size: 55%;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 50%;
+    }
   }
   body {
     font-family: 'Space Grotesk', sans-serif;
@@ -65,7 +72,8 @@ const GlobalStyles = createGlobalStyle`
     background: ${props => props.theme.colors.background1};
     color: ${props => props.theme.colors.primary1};
     cursor: default;
-
+    overflow-x: hidden;
+    width: 100%;
   }
   h1,h2,h3,h4,h5,h6,button {
     font-family: 'Space Grotesk', sans-serif;

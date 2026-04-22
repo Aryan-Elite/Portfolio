@@ -35,15 +35,20 @@ export const ImgPlaceholder = styled.div`
 
 export const GridContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2.5rem;
   padding: 3rem 0;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0;
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 0;
+    gap: 1.5rem;
   }
 `;
 

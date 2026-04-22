@@ -5,32 +5,33 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1.2rem;
-  margin: 2rem 0 3rem;
+  margin: 2rem auto 3rem;
   justify-items: center;
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  padding: 0 1rem;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablet */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 0 1rem;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small mobile */
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.8rem;
     padding: 0 0.5rem;
+  }
+
+  @media (max-width: 360px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
   }
 `;
 
 // Tech Card
 export const TechCard = styled.div`
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(255, 255, 255, 0.08)
-  );
+  background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.08));
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 18px;
   padding: 1.2rem 0.8rem;
@@ -47,25 +48,22 @@ export const TechCard = styled.div`
 
   &:hover {
     transform: translateY(-6px) scale(1.05);
-    background: linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.18),
-      rgba(255, 255, 255, 0.12)
-    );
+    background: linear-gradient(145deg, rgba(255,255,255,0.18), rgba(255,255,255,0.12));
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   @media (max-width: 768px) {
-    height: 140px;
-    width: 140px;
-    padding: 1rem;
+    height: auto;
+    width: 100%;
+    padding: 1.2rem 0.6rem;
   }
 
   @media (max-width: 480px) {
-    height: 130px;
-    width: 130px;
-    padding: 0.8rem;
+    height: auto;
+    width: 100%;
+    padding: 1rem 0.4rem;
+    border-radius: 12px;
   }
 `;
 
