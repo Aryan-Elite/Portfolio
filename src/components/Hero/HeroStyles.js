@@ -34,13 +34,14 @@ export const LeftSection = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 32px 0 32px 48px;
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 100%;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -48,6 +49,6 @@ export const LeftSection = styled.div`
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    padding: 1.6rem 0.8rem;
+    padding: 1.6rem 1.6rem;
   }
 `;

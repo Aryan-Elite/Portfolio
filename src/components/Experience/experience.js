@@ -40,17 +40,17 @@ const timelineAnimation = keyframes`
 `;
 
 const Section = styled.section`
-  padding: 100px 0;
+  padding: 100px 48px;
   background: ${colors.background};
   position: relative;
   overflow: hidden;
 
   @media screen and (max-width: 768px) {
-    padding: 60px 0;
+    padding: 60px 24px;
   }
 
   @media screen and (max-width: 640px) {
-    padding: 40px 0;
+    padding: 40px 16px;
   }
 `;
 
