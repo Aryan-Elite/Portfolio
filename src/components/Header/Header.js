@@ -5,6 +5,7 @@ import {
   AiFillGithub,
   AiFillLinkedin,
 } from "react-icons/ai";
+import { SiX } from "react-icons/si";
 import {
   Container,
   Div1,
@@ -57,6 +58,9 @@ const Header = () => {
         </SocialIcons>
         <SocialIcons href="https://www.linkedin.com/in/aryan-gupta-41494323a/">
           <AiFillLinkedin size="3rem" />
+        </SocialIcons>
+        <SocialIcons href="https://x.com/Aryan_Elite">
+          <SiX size="2.5rem" />
         </SocialIcons>
       </Div3>
     </Container>

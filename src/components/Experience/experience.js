@@ -237,7 +237,7 @@ const Experience = () => {
       company: "EasilyGeo",
       role: "Software Developer",
       duration: "Jan 2026 – Apr 2026",
-      logo: null,
+      logo: "/images/easilygeo.jpeg",
       bullets: [
         "Built a brand citation tracking pipeline using OpenAI Web Search and Responses API, with PostgreSQL for storing prompts, citations, and ranking data across AI search engines.",
         "Took the product from zero to 20 paying clients by handling backend, infrastructure, and iteration end-to-end.",
@@ -248,7 +248,7 @@ const Experience = () => {
       company: "LaikaTest",
       role: "Software Developer",
       duration: "Oct 2025 – Jan 2026",
-      logo: null,
+      logo: "/images/laikatest.jpeg",
       bullets: [
         "Designed and built prompt management infrastructure using Supabase, storing, labelling, and versioning prompt variants to support structured A/B testing across agent runs.",
         "Implemented distributed tracing using OpenTelemetry to monitor LLM call chains, token usage, and latency across agent runs.",
@@ -259,7 +259,7 @@ const Experience = () => {
       company: "Envint",
       role: "Backend Developer Intern",
       duration: "Dec 2024 – Mar 2025",
-      logo: null,
+      logo: "/images/envint.jpeg",
       bullets: [
         "Developed backend services using Node.js and DynamoDB, reducing report generation time by 80% for a SaaS platform.",
         "Achieved 99.9% uptime and 100,000+ annual report downloads via AWS EC2 and CloudWatch."
@@ -283,6 +283,7 @@ const Experience = () => {
                   alt={`${exp.company} logo`}
                   width={100}
                   height={100}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
                 />
               ) : (
                 <span style={{ fontSize: "3.6rem", fontWeight: 800, color: colors.accent }}>

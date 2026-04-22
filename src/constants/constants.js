@@ -6,7 +6,7 @@ export const projects = [
     image: null,
     tags: ["Next.js", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Better Auth"],
     source: "https://github.com/Aryan-Elite/FlipFlag",
-    visit: "https://github.com/Aryan-Elite/FlipFlag",
+    visit: "https://main.d1v523vwrs34r6.amplifyapp.com/",
     id: 1,
   },
   {
